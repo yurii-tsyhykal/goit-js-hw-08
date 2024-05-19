@@ -172,6 +172,7 @@ p + button:hover {
   padding: 32px;
   background-color: #f6f6fe;
   border-radius: 8px;
+  margin-bottom: 16px;
 }
 #controls input {
   border-radius: 8px;
