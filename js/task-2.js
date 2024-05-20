@@ -27,13 +27,17 @@ const images = [
 
 const list = document.querySelector('.gallery');
 
-const listImages = images.forEach(image => {
+const listImages = images.map(image => {
+  //changed line forEach ---> map
   const listItem = document.createElement('li');
-  list.append(listItem);
+  // changed line delete
 
   const ImageItem = document.createElement('img');
   ImageItem.src = image.url;
   ImageItem.alt = image.alt;
   ImageItem.width = 360;
   listItem.append(ImageItem);
+  return listItem; //added new line for return array li>img
 });
+
+list.append(...listImages); //added new line spreading array to ul.gallery

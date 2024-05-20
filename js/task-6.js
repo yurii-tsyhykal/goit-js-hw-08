@@ -22,12 +22,13 @@ function onBtnCreateClick(event) {
 function createBoxes(amount) {
   boxEl.innerHTML = '';
   let sizeBox = 30;
-
+  let markup = ''; //changed line create variable "markup" for string with html elements
   for (let i = 0; i < amount; i++) {
-    const markup = `<div style="width: ${sizeBox}px; height: ${sizeBox}px; background-color: ${getRandomHexColor()};"></div>`;
-    boxEl.insertAdjacentHTML('beforeend', markup);
+    markup += `<div style="width: ${sizeBox}px; height: ${sizeBox}px; background-color: ${getRandomHexColor()};"></div>`; //changed line old v" const markup ="; new v"markup +="
+    //changed line this line now on 31 str
     sizeBox += 10;
   }
+  boxEl.insertAdjacentHTML('beforeend', markup); //this line from 28 str
 }
 
 function destroyBoxes() {

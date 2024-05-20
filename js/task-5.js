@@ -9,7 +9,9 @@ const bodyEl = document.querySelector('body');
 const spanEl = document.querySelector('.color');
 const eventListener = btnEl.addEventListener('click', onBtnClick);
 
-function onBtnClick(event) {
-  event = bodyEl;
-  spanEl.textContent = event.style.backgroundColor = getRandomHexColor();
+function onBtnClick() {
+  // changed line -----deleted (event)
+  const randomColor = getRandomHexColor(); //changed line ---- deleted line "event = bodyEl"created variable "randomColor"
+  bodyEl.style.backgroundColor = randomColor; //new line ---- changed bodyEl color to randomColor
+  spanEl.textContent = randomColor; //text content spanEl is updated to randomColor
 }
