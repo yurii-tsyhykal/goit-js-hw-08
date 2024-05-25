@@ -34,14 +34,13 @@ a {
 }
 
 .gallery-large-item {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 1112px;
+  max-height: 640px;
 }
 
 .modal {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 28px;
   box-sizing: border-box;
 }
